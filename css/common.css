@@ -75,7 +75,7 @@ button:hover{
   padding: 5em;
 
 
-  background: rgba(0, 0, 0, 0.26);
+  background: rgba(0, 0, 0, 0.418);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
@@ -112,3 +112,28 @@ input {
 
   height: 100%;
 }
+
+/* task07 */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  outline: 0;
+  background-color: #00000023;
+  height: 20px;
+  border: #ffad56ad 2px solid;
+  border-radius: 50px;
+  transition: box-shadow 0.2s ease-in-out;
+
+
+}
+input[type="range"]::-webkit-slider-thumb {
+
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color:#ffae56;
+  border-radius: 30px;
+  cursor: pointer;  
+}
+  
+  
