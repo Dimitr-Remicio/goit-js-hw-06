@@ -5,12 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 9</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="css/common.css" />
     <style>
-      body{
-        background-image: none;
-        background-color: #f3625a;
-      }
       .widget {
         text-align: center;
       }
@@ -32,14 +29,17 @@
       }
     </style>
   </head>
-  <body>
-    <p><a href="index.html">Go back</a></p>
-
-    <div class="widget ul">
-      <p>Background color: <span class="color">-</span></p>
-      <button type="button" class="change-color">Change color</button>
+  <body><i class="bi bi-brightness-high-fill" id="Darkbutton"></i>
+    <p><a href="index.html" class="back">Go back</a></p>
+    <div class="target">
+      
+      <div class="widget">
+        <p>Background color: <span class="color">-</span></p>
+        <button type="button" class="change-color">Change color</button>
+      </div>
+      
     </div>
-
-    <script src="js/task-09.js" type="module"></script>
+  <script src="./js/dark-mode.js"></script>
+  <script src="js/task-09.js" type="module"></script>
   </body>
 </html>

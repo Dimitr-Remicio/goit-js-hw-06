@@ -1,107 +1,104 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600&display=swap');
+@import './colors.css';
+@import './fonts.css?';
+html{
+  transition: none;
+
+}
 
 * {
-  color: #ffffff;
-  box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  border-radius: 10px;
-  transition: all 300ms;
+  box-sizing: border-box;
+  color: var(--background-color);
+  transition: 500ms all;
+
+  font-family: 'DM Sans', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Krub', sans-serif;
+
+
+}
+#Darkbutton{
+  color: var(--background-contrast);
+  cursor: pointer;
+}
+.back{
+  color: var(--background-contrast);
+
+}
+.link{
+  display: flex;
   gap: 10px;
+  color: var(--background-color);
 }
-
-*:hover{
-  transition: all 300ms;
-
+ul{
+  padding: 0%;
+  color: var(--background-color);
 }
-a{
-  color: #ffffff;
-  background-color: #ffffff00;
-  padding: 5px 5px 9px;
-  border-radius: 0.6em;
-  transition: all 300ms;
-}
-a:hover{
-  background-color: #E67C2A;
-  opacity: 1;
-  transition: all 300ms;
+li{
+  margin: 10px;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: center;
-
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  font-family: 'Inter', sans-serif;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* background-color: #303030; */
-   
-  background-image: linear-gradient(to left, #ffae56, #f3625a, #8e3a58, #482e46, #1a1a1a);
-  color: #ffffff;
-  line-height: 1.5;
+  width: 100vw;
+  height: 100vh;
   
-}
-.list > ul {
-  display: flex;
-  gap: 30px;
-
-
-}
-button{
-  background-color: #ffae56;
-  color: #1a1a1a;
-  padding: 8px 12px;
-  cursor: pointer;
-}
-button:hover{
-  background-color: #ffc280;  
-  -webkit-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.44);
-  -moz-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.44);
-  box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.44);
-
-}
-.ul{
+  margin: 0 auto;
+  
   display: flex;
   flex-direction: column;
-  width: auto;
-  min-width: 400px;
-  padding: 5em;
-
-
-  background: rgba(0, 0, 0, 0.418);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  align-items: center;
+  justify-content: center;
+  
+  background-color: var(--background-color);
+  line-height: 1.5;
 }
 
 input {
-  padding: 8px;
-  margin-top: 20px;
   font: inherit;
-  background-color: #3d172428;
-  border: 0.2px solid #ffc2804d;
+  width: 100%;
+  border-radius: 0.5em;
+  height: auto;
+  padding: 5px;
+  color: var(--button-text);
+  background-color: var(--background-contrast);
+  border: 1px solid var(--background-color);
+
 }
-#counter{
+
+button {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 0.5em;
+  height: auto;
+  padding: 5px;
+  border: 1px solid var(--accent-color);
+  background-color: var(--button-color);
+  color: var(--button-text);
+  box-shadow: 0px 0px 19px 0px var(--box-shadow);
+}
+
+.target{
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  flex-direction: column;
+  
+  width: auto; min-width: 30%;  height: auto; min-height: 20%;
+  
+  margin: 20px; padding: 50px 50px;
+  color: var(--background-contrast);
+
+  border-radius: 1.8em;
+  background-color: var(--background-contrast);
+
 }
-/* TASK3 */
 .gallery{
   display: flex;
   flex-direction: row;
   padding: 0;
   gap: 0%;
-  max-width: 90%;
+  width: 100%;
 }
 .gallery__item {
   margin: 50px;
@@ -113,14 +110,36 @@ input {
   height: 100%;
 }
 
-/* task07 */
+.categories {
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+}
+#categories{
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+
+}
+
+#counter{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 2em;
+}
+#controls{
+  display: flex;
+  gap: 20px;
+}
+
 
 input[type="range"] {
   -webkit-appearance: none;
   outline: 0;
-  background-color: #00000023;
+  background-color: var(--background-contrast);
   height: 20px;
-  border: #ffad56ad 2px solid;
+  border: var(--button-text) 2px solid;
   border-radius: 50px;
   transition: box-shadow 0.2s ease-in-out;
 
@@ -131,7 +150,7 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 15px;
   height: 15px;
-  background-color:#ffae56;
+  background-color: var(--button-text);
   border-radius: 30px;
   cursor: pointer;  
 }
